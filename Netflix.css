@@ -168,13 +168,105 @@ body{
     letter-spacing: 1px;
 }
 
+.feature{
+    border-top: 8px solid #222;
+    padding: 35px 28px;
+}
+
+.feature-details{
+    text-align: center;
+}
+
+.feature-title{
+    font-weight: 600;
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+.feature-subtitle{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.feature-image-container{
+    width: 100%;
+    position: relative;
+}
+
+.feature-image{
+    width: 100%;
+}
+
+.feature-bg-video-container{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    height: 100%;
+    max-width: 73%;
+    z-index: -2;
+}
+
+.feature-bg-video{
+    width: 100%;
+}
+
+.feature-2-poster-container{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 60px;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 0.25rem 0.6rem;
+    width: 100%;
+    max-width: 16em;
+}
+
+.poster-container{
+    width: 30%;
+    height: 100%;
+}
+
+.poster{
+    width: 100%;
+    height: 100%;
+}
+.poster-details{
+    width: 50%;
+}
+.poster-details > h4{
+    font-size: 13px;
+    font-weight: 600;
+}
+.poster-details > h6{
+    font-size: 10px;
+    font-weight: 400;
+    color: rgb(6, 141, 252);
+}
+
+
+.download-gif{
+    width: 20%;
+    height: 100%;
+}
+.gif{
+    width: 100%;
+    height: 100%;
+}
+
+
 
 @media (min-width: 768px){
     .hero-bg-img-container{
-        height: 100vh;
+        height: 80vh;
     }
     .hero-bg-overlay{
-        height: 100vh;
+        height: 80vh;
     }
     .hero-card{
         top: 40%;
@@ -189,6 +281,21 @@ body{
     .hero-subtitle,
     .hero-description{
         font-size: 1.3rem;
+    }
+    .hero-description{
+        margin: 0 40px;
+    }
+
+    .feature{
+        padding: 4rem;
+    }
+    
+
+    .feature-title{
+        font-size: 35px;
+    }
+    .feature-subtitle{
+        font-size: 20px;
     }
 }
 
@@ -226,6 +333,33 @@ body{
     }
     .primary-button{
         height: 50px;
+    }
+
+    .feature{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .feature-details{
+        padding: 0 6rem;
+        text-align: left;
+    }
+
+    .feature-title{
+        font-size: 50px;
+    }
+    .feature-subtitle{
+        font-size: 25px;
+    }
+
+    .feature-image-container{
+        max-width: 600px;
+    }
+
+
+    .feature:nth-child(even){
+        flex-direction: row-reverse;
     }
 }
 
