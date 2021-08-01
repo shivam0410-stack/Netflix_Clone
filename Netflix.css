@@ -63,7 +63,7 @@ body{
 
 .hero-bg-img-container{
     width: 100%;
-    height: 75vh;
+    height: 80vh;
 }
 
 .hero-bg-image{
@@ -76,8 +76,14 @@ body{
     position: absolute;
     inset: 0;  /*equal to top,right,bottom,left = 0 */
     width: 100%;
-    height: 75vh;
+    height: 80vh;
     background-color: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient( 
+        to top, 
+        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0, 0) 60%,
+        rgba(0, 0, 0, 0.8)
+        100% );
 }
 
 .hero-card{
@@ -100,6 +106,68 @@ body{
     font-size: 1rem;
 }
 
+.hero-description{
+    margin: 0 50px;
+}
+
+.email-input{
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    padding-left: 7px ;
+}
+
+.email-label{
+    color: black;
+    position: absolute;
+    top: 28%;
+    left: 2%;
+    color: rgb(153, 149, 149);
+    transition: 0.3s;
+}
+
+.email-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-container{
+    background-color: white;
+    width: 90%;
+    height: 50px;
+    position: relative;
+}
+
+.email-input:focus + .email-label{
+    top: 0.2rem;
+    font-size: 10px;
+    color: rgb(85, 80, 80);
+}
+
+.email-input:not(:placeholder-shown).email-input:not(:focus) + .email-label{
+    top: 0.2rem;
+    font-size: 10px;
+    color: rgb(85, 80, 80);
+}
+
+.email-input:focus-visible{
+    outline: none;
+}
+
+.primary-button{
+    background-color: #dc030f;
+    border: 1px solid #dc030f;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
 
 @media (min-width: 768px){
     .hero-bg-img-container{
@@ -109,7 +177,7 @@ body{
         height: 100vh;
     }
     .hero-card{
-        top: 50%;
+        top: 40%;
         left: 30%;
         transform: translate(-20%,-50%);
     }
@@ -123,6 +191,7 @@ body{
         font-size: 1.3rem;
     }
 }
+
 
 
 @media (min-width: 1024px){
@@ -147,6 +216,16 @@ body{
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
+    }
+    .form-container{
+        width: 50%;
+    }
+    .email-form-container{
+        flex-direction: row;
+        gap: 0;
+    }
+    .primary-button{
+        height: 50px;
     }
 }
 
