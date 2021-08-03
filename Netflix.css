@@ -323,11 +323,13 @@ body{
 
 footer{
     border-top: 8px solid #333;
-    padding: 2rem;
+    padding: 10%;
+    padding-top: 50px;
     color: #757575;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: flex-start;
 }
 .footer_row_1 > h4{
     font-size: 15px;
@@ -335,15 +337,32 @@ footer{
 }
 
 .footer_row_2{
+    font-size: 11px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    gap: 30px;
+    position: relative;
+    padding-left: -1rem;
+    gap: 20px;
+}
+.footer_row_2 > ._4{
+    position: relative;
+    left: -10%;
+}
+
+.column > p{
+    padding-top: 7px;
+}
+
+
+.footer_row_3 > .dropdown-container{
+    width: fit-content;
+    border: 1px solid #757575;
+}
+.footer_row_4{
     font-size: 13px;
 }
-.column{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+
 
 
 
@@ -425,6 +444,24 @@ footer{
         justify-content: center;
         transform: translateX(15%);
     }
+
+    footer{
+        padding-bottom: 40px;
+    }
+    .footer_row_2{
+        justify-content: space-evenly;
+        font-size: 15px;
+    }
+    .footer_row_2 > ._4{
+        left: 0%;
+    }
+    .footer_row_3{
+        padding-top: 10px;
+    }
+    .footer_row_3 > .dropdown-container > .languages-dropdown{
+        font-size: 15px;
+    }
+    
 }
 
 
@@ -507,11 +544,18 @@ footer{
         font-size: 45px;
     }
     .FAQ-list{
-        padding: 1rem 25rem;
+        padding: 1rem 20rem;
     }
 
     .FAQ-get-started-email{
         transform: translateX(17%);
+    }
+    footer{
+        padding-top: 70px;
+        padding-left: 20%;
+    }
+    .footer_row_2{
+        gap: 80px;
     }
 }
 
